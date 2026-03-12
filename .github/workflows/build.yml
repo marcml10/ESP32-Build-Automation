@@ -30,3 +30,9 @@ jobs:
 
     - name: 🚀 Build the ESP32 Firmware
       run: pio run
+
+    - name: Save Compiled Firmware
+        uses: actions/upload-artifact@v4
+        with:
+          name: ESP32-Compiled-Firmware
+          path: .pio/build/
